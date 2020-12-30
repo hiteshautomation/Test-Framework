@@ -1,0 +1,2 @@
+INFO    2020-12-30 15:03:03,313 [TestNG] devpinoyLogger  - Chrome browwer launched
+INFO    2020-12-30 15:03:03,434 [TestNG] devpinoyLogger  - inside the base class method browser initilization
