@@ -83,7 +83,9 @@ public class calculatorPage extends BaseSteps {
 	public static void verifyAllInformationIcons() {
 		try {
 			getDriver().switchTo().frame(0);
+			
 			for (String s1 : helpIcons) {
+				generalUti.waitUntilElementVisible(getDriver().findElement(By.xpath("//label[text()='"+ s1+ "']/../../..//following-sibling::div[contains(@class,'field-cell field-controls')]//div[contains(@class,'field-info ng-scope')]//button")));
 				if (generalUti.isElementVisible(getDriver().findElement(By.xpath("//label[text()='"+ s1+ "']/../../..//following-sibling::div[contains(@class,'field-cell field-controls')]//div[contains(@class,'field-info ng-scope')]//button")))) 
 				{
 					ExtentTestManager.logPass("Help icon for " + s1+ " is displayed");
