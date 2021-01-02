@@ -2,14 +2,11 @@ package com.cucumber.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-
 import com.cucumber.baseSteps.steps.BaseSteps;
 import com.cucumber.extent.ExtentTestManager;
-
 import utils.generalUti;
 
 public class homePage extends BaseSteps {
@@ -65,10 +62,10 @@ public class homePage extends BaseSteps {
 	public static void verifyBtn(String btnName) {
 		try {
 			generalUti.waitUntilClickable(getDriver().findElement(By.xpath("//a[text()='" + btnName + "']")));
-			ExtentTestManager.logPass(btnName + " is displayed and clickable");
+			ExtentTestManager.logPass(btnName + " button is displayed and clickable");
 		} catch (Exception e) {
 			e.printStackTrace();
-			ExtentTestManager.logFail(btnName+ " is either not displayed or clickable");
+			ExtentTestManager.logFail(btnName+ " button is either not displayed or clickable");
 		}
 	}
 

@@ -34,9 +34,9 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class BaseSteps {
 	public String browserName;
-	public String appURL;
+	public static String appURL;
 	DesiredCapabilities cap=null;
-	//public static Properties prop;
+	String log4jConfigFile;
 	protected WebDriver driver;
 	public static ThreadLocal<WebDriver> dr = new ThreadLocal<WebDriver>();
 	public static ThreadLocal<ExtentTest> exTest= new ThreadLocal<ExtentTest>(); 
@@ -89,8 +89,7 @@ public class BaseSteps {
 					if (browserType.equalsIgnoreCase("firefox")) 
 						{										
 							System.out.println("Local Thread- Docker--Launching firefox browser");
-							logger.info("Creating a object of Firefox Browser");
-							//logger.info("Navigating to " + app_Url + "for Firefox browser");		
+							logger.info("Creating a object of Firefox Browser");	
 							cap = DesiredCapabilities.firefox();
 							cap.setBrowserName("firefox");
 							cap.setPlatform(Platform.ANY);													
@@ -143,17 +142,13 @@ public class BaseSteps {
 				preCalPg= new preCalculatorPage();
 				PageFactory.initElements(getDriver(), preCalPg);
 				calcPg= new calculatorPage();
-				PageFactory.initElements(getDriver(), calcPg);
-				
-						
+				PageFactory.initElements(getDriver(), calcPg);					
 			} 
 		
-		public void configureLogging()
-		{
-			String log4jConfigFile=System.getProperty("user.dir") +"//src//test//resources//properties//log4j1.properties";
+		public void configureLogging(){
+			log4jConfigFile=System.getProperty("user.dir") +"//src//test//resources//properties//log4j1.properties";
 			PropertyConfigurator.configure(log4jConfigFile);
 		}
-		
 		
 		public static WebDriver getDriver() {
 	        return dr.get();
@@ -174,12 +169,9 @@ public class BaseSteps {
 		}	
 		public void reportFailure(String msg){
 			getExtTest().log(LogStatus.FAIL, msg);
-			captureScreenshot();
-			
-		}
-		
+			captureScreenshot();			
+		}		
 		public void captureScreenshot()  {
-
 			File scrFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 			Date d = new Date();
 			screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
@@ -189,7 +181,6 @@ public class BaseSteps {
 		
 			}
 			getExtTest().log(LogStatus.INFO, " Screen shot--> " + test.addScreenCapture(System.getProperty("user.dir") + "\\reports\\"+screenshotName));
-
 		}
 		
 		public void addLog(String msg,String browser1)
@@ -214,8 +205,7 @@ public class BaseSteps {
 			String text2=nextText[nextText.length-1].replace("(", "").replace(")","");
 			String [] newText2=text2.split("-");	
 			String reqText=newText2[newText2.length-1];
-			System.out.println("Thread value is " + reqText);
-			
+			System.out.println("Thread value is " + reqText);			
 			return reqText;
 		}
 		public void logInfo(String messaage)

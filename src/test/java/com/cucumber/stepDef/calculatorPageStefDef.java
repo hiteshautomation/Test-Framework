@@ -2,7 +2,6 @@ package com.cucumber.stepDef;
 
 import com.cucumber.baseSteps.steps.BaseSteps;
 import com.cucumber.pages.calculatorPage;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -33,8 +32,6 @@ public class calculatorPageStefDef extends BaseSteps {
 			calculatorPage.enterSalary(salary);
 			calculatorPage.selectRate(rate);
 			calculatorPage.selectRiskProfile(profile);
-			//calculatorPage.clickKiwiSaverProjectionBtn();
-			//calculatorPage.getRetProjAmt();
 			break;
 		case "Self-employed":
 			calculatorPage.enterCurrentKSBal(currKSBal);
@@ -42,17 +39,13 @@ public class calculatorPageStefDef extends BaseSteps {
 			calculatorPage.selectFrequency(frequency);
 			calculatorPage.selectRiskProfile(profile);
 			calculatorPage.enterSavingGoalAmount(savingGoalRet);
-			//calculatorPage.clickKiwiSaverProjectionBtn();
-			//calculatorPage.getRetProjAmt();
 			break;
 		case "Not employed":
 			calculatorPage.enterCurrentKSBal(currKSBal);
 			calculatorPage.enterVolContri(volContri);
 			calculatorPage.selectFrequency(frequency);
 			calculatorPage.selectRiskProfile(profile);
-			calculatorPage.enterSavingGoalAmount(savingGoalRet);
-			//calculatorPage.clickKiwiSaverProjectionBtn();
-			
+			calculatorPage.enterSavingGoalAmount(savingGoalRet);			
 			break;
 		default:
 			break;
@@ -60,9 +53,7 @@ public class calculatorPageStefDef extends BaseSteps {
 	} catch (Exception e) {
 		e.printStackTrace();
 	} 
-	}   
-	
-
+}   
 	@When("^I click on view your kiwisaver retirement projections button$")
 	public void i_click_on_view_your_kiwisaver_retirement_projections_button()
 			throws Throwable {

@@ -6,8 +6,7 @@ import cucumber.api.java.en.When;
 
 public class preCalculatorPageStefDef extends BaseSteps{
 	
-	preCalculatorPage preCalcPg=null;
-	
+preCalculatorPage preCalcPg=null;
 
 @When("^I check  \"([^\"]*)\" page is opened$")
 public void i_check_page_is_opened_Retirement_calculator(String arg1) throws Throwable {

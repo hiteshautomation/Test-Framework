@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="150589" started-at="2020-12-29T23:42:49Z" finished-at="2020-12-29T23:45:19Z">
+  <suite name="Default suite" duration-ms="151068" started-at="2021-01-02T00:53:58Z" finished-at="2021-01-02T00:56:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="150589" started-at="2020-12-29T23:42:49Z" finished-at="2020-12-29T23:45:19Z">
+    <test name="Default test" duration-ms="151068" started-at="2021-01-02T00:53:58Z" finished-at="2021-01-02T00:56:29Z">
       <class name="com.cucumber.runner.Runner">
-        <test-method status="PASS" signature="runCuke()[pri:0, instance:com.cucumber.runner.Runner@71423665]" name="runCuke" duration-ms="150574" started-at="2020-12-29T23:42:49Z" finished-at="2020-12-29T23:45:19Z">
+        <test-method status="PASS" signature="runCuke()[pri:0, instance:com.cucumber.runner.Runner@71423665]" name="runCuke" duration-ms="151048" started-at="2021-01-02T00:53:58Z" finished-at="2021-01-02T00:56:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runCuke -->

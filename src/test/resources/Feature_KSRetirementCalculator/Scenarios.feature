@@ -3,8 +3,8 @@ Feature: To check kiwi saver retirement calculator information icons and its mes
 
   #Background: User is Logged In
   #Given I launch the website on "<browserName>"
-  @smoke @regression
-   Scenario Outline: To ensure the presence of information icon for all fields in Kiwi saver retirement calculator
+  @smoke @regression @prod @dev
+  Scenario Outline: To ensure the presence of information icon for all fields in Kiwi saver retirement calculator
   Given launch browser "<Browser>"
   Given I am on application home page
   When I check for the presence of "<navigationOption>" option
@@ -22,9 +22,9 @@ Feature: To check kiwi saver retirement calculator information icons and its mes
   | firefox  | KiwiSaver        |
   | Chrome  | KiwiSaver        |
   
-  #########################################################################################################
-  @smoke @regression
-  Scenario Outline: To calculate the projected kiwi saver balance for retirement
+  ##########################################################################################################################
+  @smoke @regression @prod @dev
+  Scenario Outline: To calculate the projected kiwi saver balance for retirement for different employment status
     Given launch browser "<Browser>"
     Given I am on application home page
     When I check for the presence of "<navigationOption>" option
