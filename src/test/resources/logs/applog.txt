@@ -1,2 +1,2 @@
-INFO    2021-01-03 12:24:57,125 [TestNG] devpinoyLogger  - Chrome browwer launched
-INFO    2021-01-03 12:24:57,243 [TestNG] devpinoyLogger  - inside the base class method browser initilization
+INFO    2021-01-03 13:51:43,614 [TestNG] devpinoyLogger  - Firefox browser launched
+INFO    2021-01-03 13:51:43,893 [TestNG] devpinoyLogger  - inside the base class method browser initilization

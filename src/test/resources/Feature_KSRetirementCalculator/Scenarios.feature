@@ -20,7 +20,7 @@ Feature: To check kiwi saver retirement calculator information icons and its mes
   Examples:
   | Browser | navigationOption |
   | firefox  | KiwiSaver        |
-  | Chrome  | KiwiSaver        |
+ 	| Chrome  | KiwiSaver        |
   
   ##########################################################################################################################
   @smoke @regression @prod @dev
