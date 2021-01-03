@@ -41,7 +41,7 @@ Feature: To check kiwi saver retirement calculator information icons and its mes
 
     Examples: 
       | Browser | navigationOption | Employment Status | Current Age | Salary | Member Contribution Rate | Current KS Balance | Voluntary contribution | Frequency   | Profile      | Saving Goal amount |
-    	| firefox  | KiwiSaver        | Employed          |          30 |  82000 | 4%                       |                    |                        |             | Defensive    |                    |
+   # 	| firefox  | KiwiSaver        | Employed          |          30 |  82000 | 4%                       |                    |                        |             | Defensive    |                    |
   #   	| firefox  | KiwiSaver        | Self-employed     |          45 |        |                          |             100000 |                     90 | Fortnightly | Conservative |             290000 |
    #   | firefox  | KiwiSaver        | Not employed      |          55 |        |                          |             140000 |                     10 | Annually    | Balanced     |             200000 |
  		#	| Chrome   | KiwiSaver        | Employed          |          30 |  82000 | 4%                       |                    |                        |             | Defensive    |                    |
