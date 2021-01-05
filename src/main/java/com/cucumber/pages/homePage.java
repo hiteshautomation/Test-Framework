@@ -21,10 +21,10 @@ public class homePage extends BaseSteps {
 	public static WebElement ksCalcBtn;
 
 	// ############################################################################################################
-	// Function Name:
+	// Function Name:verifHomePage
 	// Input Parameter: None
 	// Output Parameter: None
-	// Description:
+	// Description: To verify whether user successfully lands on home page
 	// Tester:
 	// ############################################################################################################
 	public static void verifHomePage() {
@@ -36,6 +36,14 @@ public class homePage extends BaseSteps {
 			ExtentTestManager.logFail("User fails to routes to home page");
 		}
 	}
+	
+	// ############################################################################################################
+	// Function Name:checkMenuOption
+	// Input Parameter: Menu item name
+	// Output Parameter: None
+	// Description: A generic parameterized function To be used to verify the presence of various menus options including 'KiwiSaver'
+	// Tester:
+	// ############################################################################################################
 
 	public static void checkMenuOption(String optionName) {
 		try {
@@ -48,6 +56,14 @@ public class homePage extends BaseSteps {
 			ExtentTestManager.logFail("Kiwi Saver option is not displayed on home page");
 		}
 	}
+	
+	// ############################################################################################################
+	// Function Name:hoverOverMenuItem
+	// Input Parameter: Menu item name
+	// Output Parameter: None
+	// Description: A generic parameterized function to hover over various menus options including 'KiwiSaver'
+	// Tester:
+	// ############################################################################################################
 
 	public static void hoverOverMenuItem(String optionName) {
 
@@ -58,6 +74,15 @@ public class homePage extends BaseSteps {
 			e.printStackTrace();
 		}
 	}
+	
+	// ############################################################################################################
+	// Function verifyBtn
+	// Input Parameter: Name of button 
+	// Output Parameter: None
+	// Description: A generic parameterized function to verify the presence of button such as 'kiwiSaverCalculator' 
+	// ,'click here to started' buttons
+	// Tester:
+	// ############################################################################################################
 
 	public static void verifyBtn(String btnName) {
 		try {
@@ -68,6 +93,15 @@ public class homePage extends BaseSteps {
 			ExtentTestManager.logFail(btnName+ " button is either not displayed or clickable");
 		}
 	}
+	
+	// ############################################################################################################
+	// Function Name:clickBtn
+	// Input Parameter: Name of button
+	// Output Parameter: None
+	// Description: Description: A generic parameterized function to click on buttons such as 
+	// 'kiwiSaverCalculator' ,'click here to started' buttons
+	// Tester:
+	// ############################################################################################################
 
 	public static void clickBtn(String btnName) {
 		try {

@@ -17,6 +17,14 @@ public class preCalculatorPage extends BaseSteps{
 	@FindBy(xpath="//a[text()='Click here to get started.']")
 	public WebElement btnGetStarted;
 	
+	// ############################################################################################################
+	// Function Name:verifypreCalcPage
+	// Input Parameter: None
+	// Output Parameter: None
+	// Description: To verify whether user successfully lands on pre calculator page
+	// Tester:
+	// ############################################################################################################
+	
 	public static void verifypreCalcPage() {
 		try {
 			generalUti.waitUntilElementVisible(hdPreCalcPg);

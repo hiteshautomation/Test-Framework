@@ -68,6 +68,14 @@ public class calculatorPage extends BaseSteps {
 			"Voluntary contributions", "Risk profile","Savings goal at retirement");
 
 	static String projectedRetamt;
+	
+	// ############################################################################################################
+	// Function Name:verifypreCalcPage
+	// Input Parameter: None
+	// Output Parameter: None
+	// Description: To verify whether user successfully lands on pre calculation page
+	// Tester:
+	// ############################################################################################################
 
 	public static void verifypreCalcPage() {
 		try {
@@ -80,6 +88,14 @@ public class calculatorPage extends BaseSteps {
 		}
 	}
 
+	// ############################################################################################################
+	// Function Name:verifyAllInformationIcons
+	// Input Parameter: None
+	// Output Parameter: None
+	// Description: To verify the presence of information icons for all fields on Kiwi retirement calculator page
+	// Tester:
+	// ############################################################################################################
+	
 	public static void verifyAllInformationIcons() {
 		try {
 			getDriver().switchTo().frame(0);
@@ -103,6 +119,14 @@ public class calculatorPage extends BaseSteps {
 		}
 	}	
 
+	// ############################################################################################################
+	// Function enterAge
+	// Input Parameter: Age
+	// Output Parameter: None
+	// Description: To enter age on Kiwi retirement calculator page
+	// Tester:
+	// ############################################################################################################
+	
 	public static void enterAge(String data) {
 		try {
 			getDriver().switchTo().frame(0);
@@ -116,6 +140,14 @@ public class calculatorPage extends BaseSteps {
 
 		}
 	}
+	
+	// ############################################################################################################
+	// Function enterSalary
+	// Input Parameter: Salary
+	// Output Parameter: None
+	// Description: To enter salary on Kiwi retirement calculator page
+	// Tester:
+	// ############################################################################################################
 
 	public static void enterSalary(String data) {
 		try {
@@ -129,6 +161,14 @@ public class calculatorPage extends BaseSteps {
 		}
 	}
 
+	// ############################################################################################################
+	// Function enterCurrentKSBal
+	// Input Parameter: Current Kiwi Saver balance
+	// Output Parameter: None
+	// Description: To enter Current Kiwi Saver balance on Kiwi retirement calculator page
+	// Tester:
+	// ############################################################################################################
+	
 	public static void enterCurrentKSBal(String data) {
 		try {
 			generalUti.waitUntilClickable(currKWBalance);
@@ -140,6 +180,14 @@ public class calculatorPage extends BaseSteps {
 			//Assert.assertTrue(false);
 		}
 	}
+	
+	// ############################################################################################################
+	// Function enterVolContri
+	// Input Parameter: Vol Contribution
+	// Output Parameter: None
+	// Description: To enter voluntary contribution on Kiwi retirement calculator page
+	// Tester:
+	// ############################################################################################################
 
 	public static void enterVolContri(String data) {
 		try {
@@ -151,7 +199,14 @@ public class calculatorPage extends BaseSteps {
 			//Assert.assertTrue(false);
 		}
 	}
-
+	
+	// ############################################################################################################
+	// Function enterSavingGoalAmount
+	// Input Parameter: Saving goal amount
+	// Output Parameter: None
+	// Description: To enter saving goal amount on Kiwi retirement calculator page
+	// Tester:
+	// ############################################################################################################
 	public static void enterSavingGoalAmount(String data) {
 		try {
 			generalUti.enterText(goalSavRetirementAmt, data);
@@ -162,6 +217,15 @@ public class calculatorPage extends BaseSteps {
 			//Assert.assertTrue(false);
 		}
 	}
+	
+	// ############################################################################################################
+	// Function selectEmpStatus
+	// Input Parameter: Employment Status
+	// Output Parameter: None
+	// Description: A generic function to select various employment status such as Employed or Self Employed or 
+	// Not Employed etc. on Kiwi retirement calator page
+	// Tester:
+	// ############################################################################################################
 
 	public static void selectEmpStatus(String data) {
 		try {
@@ -175,6 +239,15 @@ public class calculatorPage extends BaseSteps {
 			ExtentTestManager.logFail(("Failed to select option-->" + data));
 		}
 	}
+	
+	// ############################################################################################################
+	// Function selectFrequency
+	// Input Parameter: Frequency
+	// Output Parameter: None
+	// Description: A generic function to select various frequency types such as Weekly or Monthly or Annually 
+	// on Kiwi retirement calator page
+	// Tester:
+	// ############################################################################################################
 
 	public static void selectFrequency(String data) {
 		try {
@@ -191,6 +264,13 @@ public class calculatorPage extends BaseSteps {
 		}
 	}
 
+	// ############################################################################################################
+	// Function selectFrequency
+	// Input Parameter: Rates
+	// Output Parameter: None
+	// Description: A generic function to select various rates such as 3% or 4$ etc on Kiwi retirement calator page
+	// Tester:
+	// ############################################################################################################
 	public static void selectRate(String data) {
 		try {
 			generalUti.click(getDriver().findElement(By.xpath("//span[text()='" + data + "']")));
@@ -201,6 +281,15 @@ public class calculatorPage extends BaseSteps {
 			//Assert.assertTrue(false);
 		}
 	}
+	
+	// ############################################################################################################
+	// Function selectRiskProfile
+	// Input Parameter: Risk profiles
+	// Output Parameter: None
+	// Description: A generic function to select various risk profiles such as 'Defensive' or 'Conservative'
+	// etc on Kiwi retirement calator page
+	// Tester:
+	// ############################################################################################################
 
 	public static void selectRiskProfile(String data) {
 		try {
@@ -212,6 +301,14 @@ public class calculatorPage extends BaseSteps {
 			//Assert.assertTrue(false);
 		}
 	}
+	
+	// ############################################################################################################
+	// Function clickKiwiSaverProjectionBtn
+	// Input Parameter: None
+	// Output Parameter: None
+	// Description: To click on view your Kiwi saver projection button
+	// Tester:
+	// ############################################################################################################
 
 	public static void clickKiwiSaverProjectionBtn() {
 		try {
@@ -224,6 +321,14 @@ public class calculatorPage extends BaseSteps {
 			//Assert.assertTrue(false);
 		}
 	}
+	
+	// ############################################################################################################
+	// Function getRetProjAmt
+	// Input Parameter: None
+	// Output Parameter: None
+	// Description: To get projection amount
+	// Tester:
+	// ############################################################################################################
 
 	public static void getRetProjAmt() {
 		try {
