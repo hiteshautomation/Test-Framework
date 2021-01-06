@@ -115,7 +115,7 @@ public class calculatorPage extends BaseSteps {
 		} catch (Exception e) {
 			e.printStackTrace();
 			ExtentTestManager.logFail("Help icons fails to displays information icons");
-			//Assert.assertTrue(false);
+			Assert.assertTrue(isEventSuccessful);
 		}
 	}	
 
