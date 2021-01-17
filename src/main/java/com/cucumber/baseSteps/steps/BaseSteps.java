@@ -76,6 +76,7 @@ public class BaseSteps {
 			
 			configureLogging();
 		}
+		// Just for demo purpose
 		
 		public void openBrowser(String browserType) {
 				
